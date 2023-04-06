@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 * {
     box-sizing: border-box;
@@ -9,9 +7,67 @@
 body {
     margin: 0;
     padding: 0;
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Changa One', cursive;
+    font-family: 'Roboto', sans-serif;
     background: black;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    /* border:1px solid red; */
+    position: absolute;
+}
+
+.logo {
+    flex: 20%;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 10px;
+    /* border:1px solid blue; */
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+.grupo-topo {
+    flex: 80%;
+}
+
+.select-idioma {
+    padding: 5px 15px;
+    float: right;
+    margin: 1%;
+    background: none;
+    color: white;
+}
+
+.btn-topo {
+    background: red;
+    padding: 5px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    float: right;
+    margin: 1% 5% 0 1%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* height: 80vh; */
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)), url('../img/fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 8px solid #333333;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .img-container {
@@ -30,141 +86,78 @@ body {
     z-index: 1;
 }
 
-.logo {
-    flex: 30%;
-    text-align: left;
-    padding-left: 7vw;
-}
-
-.logo img {
-    max-width: 50%;
-    max-height: 100%;
-    padding: 15px 0 0 15px;
-}
-
-.grupo-topo {
-    flex: 70%;
-}
-
-select#idioma {
-    font-family: Arial, FontAwesome !important;
-    font-size: 1vw;
-    padding: 8px 25px;
-    float: right;
-    border-radius: 5px;
-    margin: 1%;
-    background: none;
-    color: white;
-    font-weight: 500;
-}
-
-a#btn-topo {
-    background: red;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    float: right;
-    margin: 1% 15% 0 1%;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    align-items: center;
-    padding: 15px;
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 80vh;
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)), url(../img/netflix-fundo-original.jpg);
-    background-size: cover;
-    background-position: center;
-    border-bottom: 8px solid #202020;
-}
-
 .miolo {
-    color: white;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
     padding: 10px;
+    /* border:1px solid white; */
 }
 
-h1 {
-    font-size: 3.5rem;
-    text-shadow: 2px 2px 5px black;
-    font-weight: 300;
-    padding: 0px;
+.miolo h1 {
+    color: white;
+    font-size: 3rem;
+    text-shadow: 1px 1px 5px black;
+    padding: 0;
     margin: 0;
 }
 
-h2 {
-    padding-top: 15px;
+.miolo h2 {
+    color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 5px black;
+    padding: 10px;
     margin: 0;
+}
+
+.miolo h3 {
+    color: white;
     font-weight: 400;
-    text-shadow: 2px 2px 5px black;
-    font-family: 'Roboto', sans-serif;
 }
 
-h3 {
-    padding: 15px;
-    margin: 0;
-    font-weight: 400;
-    text-shadow: 2px 2px 5px black;
-    font-family: 'Roboto', sans-serif;
-}
-
-.container-email {
+.input-container {
     text-align: center;
 }
 
 .input-email {
-    width: 35vw;
-    height: 3vw;
-    border-radius: 5px;
-    padding: 25px 40px 25px 15px;
-    font-size: 1rem;
+    width: 450px;
+    height: 58px;
+    padding: 30px 40px 20px 10px;
     margin-right: 0;
     margin-bottom: 2%;
-    border: 1px solid grey;
-    background: none;
+    border: none;
 }
 
 .btn-email {
     background: red;
     border: 1px solid red;
-    border-radius: 5px;
     color: white;
-    height: 3vw;
-    width: 10vw;
-    font-size: 1.5rem;
-    padding: 0.5vw;
+    width: 200px;
+    height: 60px;
+    font-size: 22px;
+    padding: 19px;
+    margin-left: 0;
 }
 
 section {
-
+    display: flex;
     color: white;
-    border-bottom: 8px solid #202020;
+    border-bottom: 8px solid #333333;
     margin-bottom: 2%;
-    height: 30vw;
 }
 
 section img {
     max-width: 100%;
 }
 
+section h2 {
+    font-size: 3rem;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
 
 .row::after {
     content: "";
@@ -174,45 +167,56 @@ section img {
 
 [class*="col-"] {
     float: left;
-    padding: 4vw;
-    height: 30vw;
+    padding: 35px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .pergunta {
     width: 100%;
-    background-color: #202020;
-    padding: 1.5vw;
+    background: #333333;
+    padding: 15px 0px 15px 25px;
+    font-size: 30px;
     cursor: pointer;
-    font-size: 1.5vw;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .resposta {
     display: none;
     width: 100%;
-    background-color: #202020;
-    padding: 1.5vw;
+    background: #333333;
+    padding: 15px 0px 15px 25px;
+    font-size: 30px;
     cursor: pointer;
-    font-size: 1.5vw;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .icon {
     float: right;
-    margin: 0 1vw 1vw 0%;
-    font-size: 2rem
+    margin-right: 5%;
 }
 
-footer,
-a {
-    font-family: 'Roboto', sans-serif;
-    color: #b4b4b4;
-    font-size: 1vw;
+footer {
+    width: 100%;
+    color: gray;
+}
+
+footer a {
+    color: gray;
+    text-decoration: none;
+}
+
+footer a:hover {
     text-decoration: underline;
-
 }
+
+.no-padding {
+    padding: 20px !important;
+}
+
+
 
 /***** RESPONSIVIDADE ****/
 
@@ -232,7 +236,7 @@ a {
 
     }
 
-    h1 {
+    .miolo h1 {
         font-size: 1.5rem !important;
     }
 
@@ -272,7 +276,7 @@ a {
 
     }
 
-    h1 {
+    .miolo h1 {
         font-size: 2.5rem;
     }
 
@@ -307,7 +311,7 @@ a {
 
     }
 
-    h1 {
+    .miolo h1 {
         font-size: 2.5rem;
     }
 
